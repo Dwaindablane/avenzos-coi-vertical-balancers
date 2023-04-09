@@ -8,7 +8,7 @@ public partial class ExampleModIds {
 
 	public partial class Research {
 
-		[ResearchCosts(difficulty: 1)]
+		[ResearchCosts(difficulty: 0)]
 		public static readonly ResNodeID UnlockExampleModStuff = Ids.Research.CreateId("UnlockExampleModStuff");
 
 	}
