@@ -1,6 +1,12 @@
 blastfurnace_d374
     Assets/ExampleMod/BlastFurnace.prefab
 
-blastfurnace_sound_af85
-    Assets/ExampleMod/ExampleModel/BlastFurnace_Sound.prefab
+flatverticalbalancer2h_8d04
+    Assets/ExampleMod/FlatVerticalBalancer2h.prefab
+
+looseverticalbalancer2h_50a9
+    Assets/ExampleMod/LooseVerticalBalancer2h.prefab
+
+pipeverticalbalancer2h_a59e
+    Assets/ExampleMod/PipeVerticalBalancer2h.prefab
 

@@ -5,7 +5,7 @@ if "%COI_ROOT%" == "" (
 	goto :eof
 )
 
-for %%s in ("Mafi.dll" "Mafi.Core.dll" "Mafi.Base.dll" "Mafi.Unity.dll") do (
+for %%s in ("Mafi.dll" "Mafi.Core.dll" "Mafi.Base.dll" "Mafi.Unity.dll" "Mafi.ModsAuthoringSupport.dll") do (
 	del "%~dp0\%%s"
 	mklink /H "%~dp0\%%s" "%COI_ROOT%\Captain of Industry_Data\Managed\%%s"
 )
