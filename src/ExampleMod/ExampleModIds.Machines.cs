@@ -7,8 +7,9 @@ public partial class ExampleModIds {
 
 	public partial class Machines {
 
-		public static readonly MachineID ExampleFurnace = Ids.Machines.CreateId("ExampleFurnace");
+        //public static readonly MachineID ExampleFurnace = 
+        //public static readonly MachineID ExampleFurnace = Ids.Machines.CreateId("ExampleFurnace");
 
-	}
+    }
 
 }
