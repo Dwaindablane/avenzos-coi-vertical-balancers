@@ -19,3 +19,5 @@ Builds/
 Thumbs.db
 ehthumbs.db
 desktop.ini
+src/ExampleMod.Unity/Assembly-CSharp.csproj
+src/ExampleMod.Unity/Assembly-CSharp-Editor.csproj
