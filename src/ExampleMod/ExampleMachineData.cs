@@ -55,30 +55,19 @@ internal class ExampleMachineData : IModData
 
         var initLayout = new EntityLayoutParser(db).ParseLayoutOrThrow(layoutParams, $"[{height}]");
 
-        List<IoPortTemplate> ports = new List<IoPortTemplate>();
-
-        ports.Add(new IoPortTemplate(new PortSpec('A', IoPortType.Any, portShape, false), new RelTile3i(0, 0, 0), Direction90.PlusX));
-        ports.Add(new IoPortTemplate(new PortSpec('B', IoPortType.Any, portShape, false), new RelTile3i(0, 0, 0), Direction90.MinusX));
-
-        //if(height > 1)
-        //{
-        ports.Add(new IoPortTemplate(new PortSpec('C', IoPortType.Any, portShape, false), new RelTile3i(0, 0, height - 1), Direction90.PlusY));
-        ports.Add(new IoPortTemplate(new PortSpec('D', IoPortType.Any, portShape, false), new RelTile3i(0, 0, height - 1), Direction90.MinusY));
-        //}
-        //else
-        //{
-        //    ports.Add(new IoPortTemplate(new PortSpec('C', IoPortType.Any, portShape, false), new RelTile3i(0, 0, 0), Direction90.PlusY));
-        //    ports.Add(new IoPortTemplate(new PortSpec('D', IoPortType.Any, portShape, false), new RelTile3i(0, 0, 0), Direction90.MinusY));
-        //}
+        IoPortTemplate[] ports = new IoPortTemplate[]
+        {
+        new IoPortTemplate(new PortSpec('A', IoPortType.Any, portShape, false), new RelTile3i(0, 0, 0), Direction90.PlusX),
+        new IoPortTemplate(new PortSpec('B', IoPortType.Any, portShape, false), new RelTile3i(0, 0, 0), Direction90.MinusX),
+        new IoPortTemplate(new PortSpec('C', IoPortType.Any, portShape, false), new RelTile3i(0, 0, height - 1), Direction90.PlusY),
+        new IoPortTemplate(new PortSpec('D', IoPortType.Any, portShape, false), new RelTile3i(0, 0, height - 1), Direction90.MinusY),
+        };
 
         return new EntityLayout("", initLayout.LayoutTiles, initLayout.TerrainVertices, ports.ToImmutableArray(), layoutParams, initLayout.CollapseVerticesThreshold);
     }
 
     private void AddZippers(ProtoRegistrator registrator, StaticEntityProto.ID id, string name, IoPortShapeProto portShape, EntityCostsTpl costs, int height, string prefabPath)
     {
-
-        //StaticEntityProto.ID zipperIdFor = GetZipperIdFor(height, portShape.Id);
-
         ProtosDb prototypesDb = registrator.PrototypesDb;
         Proto.Str strings = Proto.CreateStr(id, name, "Allows distributing and prioritizing products using any of its two input and output ports.", "small machine that allows splitting and merging of transports");
 
@@ -93,8 +82,6 @@ internal class ExampleMachineData : IModData
 
     public void RegisterData(ProtoRegistrator registrator)
     {
-
-        //MINI_ZIP_TITLE = new Proto.Str(Loc.Str("MiniZip_all", "Connector", "small box that allows splitting and merging of transports"));
 
         IoPortShapeProto shapeFlat = registrator.PrototypesDb.GetOrThrow<IoPortShapeProto>(Ids.IoPortShapes.FlatConveyor);
         AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI1, ExampleModTitles.Balancers.BalancerVerticalFlatI1, shapeFlat, Costs.Transports.FlatZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalFlatI1);
