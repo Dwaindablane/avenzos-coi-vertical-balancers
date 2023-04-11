@@ -1,1 +1,1 @@
-Assets/Vertical Balancers/Pipe Mini Balancer.prefab
+Assets/ExampleMod/BlastFurnace.prefab

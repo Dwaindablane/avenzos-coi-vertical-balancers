@@ -6,10 +6,11 @@ namespace ExampleMod;
 
 public partial class ExampleModIds {
 
+
 	public partial class Research {
 
-		//[ResearchCosts(difficulty: 0)]
-		//public static readonly ResNodeID UnlockExampleModStuff = Ids.Research.CreateId("UnlockExampleModStuff");
+        [ResearchCosts(4)]
+        public static readonly ResNodeID UnlockVerticalBalancers = Ids.Research.CreateId("UnlockVerticalBalancers");
 
 	}
 

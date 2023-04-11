@@ -66,7 +66,7 @@ internal class ExampleMachineData : IModData
         return new EntityLayout("", initLayout.LayoutTiles, initLayout.TerrainVertices, ports.ToImmutableArray(), layoutParams, initLayout.CollapseVerticesThreshold);
     }
 
-    private void AddZippers(ProtoRegistrator registrator, StaticEntityProto.ID id, string name, IoPortShapeProto portShape, EntityCostsTpl costs, int height, string prefabPath)
+    private void AddZippers(ProtoRegistrator registrator, StaticEntityProto.ID id, string name, IoPortShapeProto portShape, EntityCostsTpl costs, int height, string prefabPath, Option<string> iconPath)
     {
         ProtosDb prototypesDb = registrator.PrototypesDb;
         Proto.Str strings = Proto.CreateStr(id, name, "Allows distributing and prioritizing products using any of its two input and output ports.", "small machine that allows splitting and merging of transports");
@@ -75,7 +75,7 @@ internal class ExampleMachineData : IModData
         EntityLayout layout = BuildElevatorLayout(registrator.PrototypesDb, portShape, height);
 
         ImmutableArray<ToolbarCategoryProto> categories = registrator.GetCategoriesProtos(ExampleModIds.ToolbarCategories.Balancers);
-        var zipper = new ZipperProto(id, strings, layout, costs.MapToEntityCosts(registrator), requiredPower, new LayoutEntityProto.Gfx(prefabPath, default(RelTile3f), default(Option<string>), ColorRgba.White, hideBlockedPortsIcon: true, null, categories, useInstancedRendering: true, 2));
+        var zipper = new ZipperProto(id, strings, layout, costs.MapToEntityCosts(registrator), requiredPower, new LayoutEntityProto.Gfx(prefabPath,  default(RelTile3f), iconPath, ColorRgba.White, hideBlockedPortsIcon: true, null, categories, useInstancedRendering: false, 2));
 
         prototypesDb.Add(zipper);
     }
@@ -84,24 +84,23 @@ internal class ExampleMachineData : IModData
     {
 
         IoPortShapeProto shapeFlat = registrator.PrototypesDb.GetOrThrow<IoPortShapeProto>(Ids.IoPortShapes.FlatConveyor);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI1, ExampleModTitles.Balancers.BalancerVerticalFlatI1, shapeFlat, Costs.Transports.FlatZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalFlatI1);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI2, ExampleModTitles.Balancers.BalancerVerticalFlatI2, shapeFlat, Costs.Transports.FlatZipper, 2, ExampleModPrefabs.Balancers.BalancerVerticalFlatI2);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI3, ExampleModTitles.Balancers.BalancerVerticalFlatI3, shapeFlat, Costs.Transports.FlatZipper, 3, ExampleModPrefabs.Balancers.BalancerVerticalFlatI3);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI4, ExampleModTitles.Balancers.BalancerVerticalFlatI4, shapeFlat, Costs.Transports.FlatZipper, 4, ExampleModPrefabs.Balancers.BalancerVerticalFlatI4);
+        
+        //AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI1, ExampleModTitles.Balancers.BalancerVerticalFlatI1, shapeFlat, Costs.Transports.FlatZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalFlatI1, ExampleModIcons.Balancers.BalancerVerticalFlatI1);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI2, ExampleModTitles.Balancers.BalancerVerticalFlatI2, shapeFlat, ExampleModCosts.Balancers.VerticalFlat, 2, ExampleModPrefabs.Balancers.BalancerVerticalFlatI2, ExampleModIcons.Balancers.BalancerVerticalFlatI2);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI3, ExampleModTitles.Balancers.BalancerVerticalFlatI3, shapeFlat, ExampleModCosts.Balancers.VerticalFlat, 3, ExampleModPrefabs.Balancers.BalancerVerticalFlatI3, ExampleModIcons.Balancers.BalancerVerticalFlatI3);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalFlatI4, ExampleModTitles.Balancers.BalancerVerticalFlatI4, shapeFlat, ExampleModCosts.Balancers.VerticalFlat, 4, ExampleModPrefabs.Balancers.BalancerVerticalFlatI4, ExampleModIcons.Balancers.BalancerVerticalFlatI4);
 
         IoPortShapeProto shapeLoose = registrator.PrototypesDb.GetOrThrow<IoPortShapeProto>(Ids.IoPortShapes.LooseMaterialConveyor);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI1, ExampleModTitles.Balancers.BalancerVerticalLooseI1, shapeLoose, Costs.Transports.LooseZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalLooseI1);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI2, ExampleModTitles.Balancers.BalancerVerticalLooseI2, shapeLoose, Costs.Transports.LooseZipper, 2, ExampleModPrefabs.Balancers.BalancerVerticalLooseI2);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI3, ExampleModTitles.Balancers.BalancerVerticalLooseI3, shapeLoose, Costs.Transports.LooseZipper, 3, ExampleModPrefabs.Balancers.BalancerVerticalLooseI3);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI4, ExampleModTitles.Balancers.BalancerVerticalLooseI4, shapeLoose, Costs.Transports.LooseZipper, 4, ExampleModPrefabs.Balancers.BalancerVerticalLooseI4);
+        //AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI1, ExampleModTitles.Balancers.BalancerVerticalLooseI1, shapeLoose, Costs.Transports.LooseZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalLooseI1, ExampleModIcons.Balancers.BalancerVerticalLooseI1);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI2, ExampleModTitles.Balancers.BalancerVerticalLooseI2, shapeLoose, ExampleModCosts.Balancers.VerticalLoose, 2, ExampleModPrefabs.Balancers.BalancerVerticalLooseI2, ExampleModIcons.Balancers.BalancerVerticalLooseI2);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI3, ExampleModTitles.Balancers.BalancerVerticalLooseI3, shapeLoose, ExampleModCosts.Balancers.VerticalLoose, 3, ExampleModPrefabs.Balancers.BalancerVerticalLooseI3, ExampleModIcons.Balancers.BalancerVerticalLooseI3);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalLooseI4, ExampleModTitles.Balancers.BalancerVerticalLooseI4, shapeLoose, ExampleModCosts.Balancers.VerticalLoose, 4, ExampleModPrefabs.Balancers.BalancerVerticalLooseI4, ExampleModIcons.Balancers.BalancerVerticalLooseI4);
 
         IoPortShapeProto shapePipe = registrator.PrototypesDb.GetOrThrow<IoPortShapeProto>(Ids.IoPortShapes.Pipe);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI1, ExampleModTitles.Balancers.BalancerVerticalPipeI1, shapePipe, Costs.Transports.FluidZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalPipeI1);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI2, ExampleModTitles.Balancers.BalancerVerticalPipeI2, shapePipe, Costs.Transports.FluidZipper, 2, ExampleModPrefabs.Balancers.BalancerVerticalPipeI2);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI3, ExampleModTitles.Balancers.BalancerVerticalPipeI3, shapePipe, Costs.Transports.FluidZipper, 3, ExampleModPrefabs.Balancers.BalancerVerticalPipeI3);
-        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI4, ExampleModTitles.Balancers.BalancerVerticalPipeI4, shapePipe, Costs.Transports.FluidZipper, 4, ExampleModPrefabs.Balancers.BalancerVerticalPipeI4);
-
-
+        //AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI1, ExampleModTitles.Balancers.BalancerVerticalPipeI1, shapePipe, Costs.Transports.FluidZipper, 1, ExampleModPrefabs.Balancers.BalancerVerticalPipeI1, ExampleModIcons.Balancers.BalancerVerticalPipeI1);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI2, ExampleModTitles.Balancers.BalancerVerticalPipeI2, shapePipe, ExampleModCosts.Balancers.VerticalPipe, 2, ExampleModPrefabs.Balancers.BalancerVerticalPipeI2, ExampleModIcons.Balancers.BalancerVerticalPipeI2);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI3, ExampleModTitles.Balancers.BalancerVerticalPipeI3, shapePipe, ExampleModCosts.Balancers.VerticalPipe, 3, ExampleModPrefabs.Balancers.BalancerVerticalPipeI3, ExampleModIcons.Balancers.BalancerVerticalPipeI3);
+        AddZippers(registrator, ExampleModIds.Balancers.BalancerVerticalPipeI4, ExampleModTitles.Balancers.BalancerVerticalPipeI4, shapePipe, ExampleModCosts.Balancers.VerticalPipe, 4, ExampleModPrefabs.Balancers.BalancerVerticalPipeI4, ExampleModIcons.Balancers.BalancerVerticalPipeI4);
 
 
         // registrator.MachineProtoBuilder

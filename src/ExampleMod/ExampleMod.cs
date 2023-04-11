@@ -41,9 +41,9 @@ public sealed class ExampleMod : IMod {
         ProtosDb prototypesDb = registrator.PrototypesDb;
         prototypesDb.Add(new ToolbarCategoryProto(ExampleModIds.ToolbarCategories.Balancers, Proto.CreateStr(ExampleModIds.ToolbarCategories.Balancers, "Balancers", null, ""), 110f, "Assets/Unity/UserInterface/Toolbar/Transports.svg", isTransportBuildAllowed: true, containsTransports: false, "BALANCER"));
         registrator.RegisterData<ExampleMachineData>();
-
+          
 		// Registers all research from this assembly. See ExampleResearchData.cs for examples.
-		//registrator.RegisterDataWithInterface<IResearchNodesData>();
+		registrator.RegisterDataWithInterface<IResearchNodesData>();
 
         
 

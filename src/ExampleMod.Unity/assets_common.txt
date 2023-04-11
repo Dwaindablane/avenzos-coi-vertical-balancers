@@ -1,12 +1,38 @@
-blastfurnace_d374
-    Assets/ExampleMod/BlastFurnace.prefab
+layouts_fec1
+    Assets/ExampleMod/Icons/Layouts/FlatVerticalBalancer2h.png
+    Assets/ExampleMod/Icons/Layouts/FlatVerticalBalancer3h.png
+    Assets/ExampleMod/Icons/Layouts/FlatVerticalBalancer4h.png
+    Assets/ExampleMod/Icons/Layouts/LooseVerticalBalancer2h.png
+    Assets/ExampleMod/Icons/Layouts/LooseVerticalBalancer3h.png
+    Assets/ExampleMod/Icons/Layouts/LooseVerticalBalancer4h.png
+    Assets/ExampleMod/Icons/Layouts/PipeBalancer2h.png
+    Assets/ExampleMod/Icons/Layouts/PipeBalancer3h.png
+    Assets/ExampleMod/Icons/Layouts/PipeBalancer4h.png
 
-flatverticalbalancer2h_8d04
-    Assets/ExampleMod/FlatVerticalBalancer2h.prefab
+flatverticalbalancer2h_a87f
+    Assets/ExampleMod/Prefabs/FlatVerticalBalancer2h.prefab
 
-looseverticalbalancer2h_50a9
-    Assets/ExampleMod/LooseVerticalBalancer2h.prefab
+flatverticalbalancer3h_2fec
+    Assets/ExampleMod/Prefabs/FlatVerticalBalancer3h.prefab
 
-pipeverticalbalancer2h_a59e
-    Assets/ExampleMod/PipeVerticalBalancer2h.prefab
+flatverticalbalancer4h_580a
+    Assets/ExampleMod/Prefabs/FlatVerticalBalancer4h.prefab
+
+looseverticalbalancer2h_7b08
+    Assets/ExampleMod/Prefabs/LooseVerticalBalancer2h.prefab
+
+looseverticalbalancer3h_66e5
+    Assets/ExampleMod/Prefabs/LooseVerticalBalancer3h.prefab
+
+looseverticalbalancer4h_5b06
+    Assets/ExampleMod/Prefabs/LooseVerticalBalancer4h.prefab
+
+pipebalancer2h_e658
+    Assets/ExampleMod/Prefabs/PipeBalancer2h.prefab
+
+pipebalancer3h_3dd5
+    Assets/ExampleMod/Prefabs/PipeBalancer3h.prefab
+
+pipebalancer4h_1deb
+    Assets/ExampleMod/Prefabs/PipeBalancer4h.prefab
 
