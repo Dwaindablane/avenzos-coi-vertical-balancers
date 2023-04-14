@@ -1,9 +1,9 @@
 ﻿using Mafi.Base;
 using ToolbarID = Mafi.Core.Prototypes.Proto.ID;
 
-namespace ExampleMod;
+namespace Avenzos.VerticalBalancers;
 
-public partial class ExampleModIds 
+public partial class Ids 
 {
 	public partial class ToolbarCategories
     {

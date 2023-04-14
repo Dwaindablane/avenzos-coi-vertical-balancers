@@ -1,13 +1,13 @@
 ﻿using Mafi;
 using Mafi.Base;
-namespace ExampleMod;
+namespace Avenzos.VerticalBalancers;
 
-public partial class ExampleModTitles
+public partial class Titles
 {
 	public partial class Balancers
     {
        
-
+        public static readonly string BalancersVertical = "Vertical Balancers";
 
 		public static readonly string BalancerVerticalLooseI1 = "Balancer U-Shape I1";
         public static readonly string BalancerVerticalLooseI2 = "Balancer U-Shape I2";

@@ -1,9 +1,9 @@
 ﻿using Mafi.Base;
 using BalancerID = Mafi.Core.Entities.Static.StaticEntityProto.ID;
 
-namespace ExampleMod;
+namespace Avenzos.VerticalBalancers;
 
-public partial class ExampleModIds 
+public partial class Ids
 {
 	public partial class Balancers
     {

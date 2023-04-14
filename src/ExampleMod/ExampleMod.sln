@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleMod", "ExampleMod.csproj", "{D23DDBDC-22D8-44E4-8D95-E7B9CA928D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avenzos.COI.VerticalBalancers", "Avenzos.COI.VerticalBalancers.csproj", "{D23DDBDC-22D8-44E4-8D95-E7B9CA928D72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

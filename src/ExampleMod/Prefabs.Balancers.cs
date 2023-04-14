@@ -1,7 +1,7 @@
 ﻿using Mafi.Base;
-namespace ExampleMod;
+namespace Avenzos.VerticalBalancers;
 
-public partial class ExampleModPrefabs
+public partial class Prefabs
 {
 	public partial class Balancers
     {
