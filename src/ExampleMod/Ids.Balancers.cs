@@ -16,11 +16,6 @@ public partial class Ids
         public static readonly BalancerID BalancerVerticalFlatI2 = new BalancerID("BalancerVerticalFlatI2");
         public static readonly BalancerID BalancerVerticalFlatI3 = new BalancerID("BalancerVerticalFlatI3");
         public static readonly BalancerID BalancerVerticalFlatI4 = new BalancerID("BalancerVerticalFlatI4");
-
-        public static readonly BalancerID BalancerVerticalPipeI1 = new BalancerID("BalancerVerticalPipeI1");
-        public static readonly BalancerID BalancerVerticalPipeI2 = new BalancerID("BalancerVerticalPipeI2");
-        public static readonly BalancerID BalancerVerticalPipeI3 = new BalancerID("BalancerVerticalPipeI3");
-        public static readonly BalancerID BalancerVerticalPipeI4 = new BalancerID("BalancerVerticalPipeI4");
     }
 
 }

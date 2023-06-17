@@ -71,11 +71,5 @@ internal class BalancersLayoutEntityData : IModData
         AddZippers(registrator, Ids.Balancers.BalancerVerticalLooseI2, Titles.Balancers.BalancerVerticalLooseI2, shapeLoose, Costs.Balancers.VerticalLoose, 2, Prefabs.Balancers.BalancerVerticalLooseI2, Icons.Balancers.BalancerVerticalLooseI2);
         AddZippers(registrator, Ids.Balancers.BalancerVerticalLooseI3, Titles.Balancers.BalancerVerticalLooseI3, shapeLoose, Costs.Balancers.VerticalLoose, 3, Prefabs.Balancers.BalancerVerticalLooseI3, Icons.Balancers.BalancerVerticalLooseI3);
         AddZippers(registrator, Ids.Balancers.BalancerVerticalLooseI4, Titles.Balancers.BalancerVerticalLooseI4, shapeLoose, Costs.Balancers.VerticalLoose, 4, Prefabs.Balancers.BalancerVerticalLooseI4, Icons.Balancers.BalancerVerticalLooseI4);
-
-        IoPortShapeProto shapePipe = registrator.PrototypesDb.GetOrThrow<IoPortShapeProto>(Mafi.Base.Ids.IoPortShapes.Pipe);
-        AddZippers(registrator, Ids.Balancers.BalancerVerticalPipeI1, Titles.Balancers.BalancerVerticalPipeI1, shapePipe, Costs.Balancers.VerticalPipe, 1, Prefabs.Balancers.BalancerVerticalPipeI1, Icons.Balancers.BalancerVerticalPipeI1);
-        AddZippers(registrator, Ids.Balancers.BalancerVerticalPipeI2, Titles.Balancers.BalancerVerticalPipeI2, shapePipe, Costs.Balancers.VerticalPipe, 2, Prefabs.Balancers.BalancerVerticalPipeI2, Icons.Balancers.BalancerVerticalPipeI2);
-        AddZippers(registrator, Ids.Balancers.BalancerVerticalPipeI3, Titles.Balancers.BalancerVerticalPipeI3, shapePipe, Costs.Balancers.VerticalPipe, 3, Prefabs.Balancers.BalancerVerticalPipeI3, Icons.Balancers.BalancerVerticalPipeI3);
-        AddZippers(registrator, Ids.Balancers.BalancerVerticalPipeI4, Titles.Balancers.BalancerVerticalPipeI4, shapePipe, Costs.Balancers.VerticalPipe, 4, Prefabs.Balancers.BalancerVerticalPipeI4, Icons.Balancers.BalancerVerticalPipeI4);
     }
 }

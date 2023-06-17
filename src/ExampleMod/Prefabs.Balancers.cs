@@ -14,11 +14,6 @@ public partial class Prefabs
         public static readonly string BalancerVerticalFlatI2 = "Assets/ExampleMod/Prefabs/FlatVerticalBalancer2h.prefab";
         public static readonly string BalancerVerticalFlatI3 = "Assets/ExampleMod/Prefabs/FlatVerticalBalancer3h.prefab";
         public static readonly string BalancerVerticalFlatI4 = "Assets/ExampleMod/Prefabs/FlatVerticalBalancer4h.prefab";
-
-        public static readonly string BalancerVerticalPipeI1 = "Assets/Base/MiniZippers/ConnectorFluid.prefab";
-        public static readonly string BalancerVerticalPipeI2 = "Assets/ExampleMod/Prefabs/PipeVerticalBalancer2h.prefab";
-        public static readonly string BalancerVerticalPipeI3 = "Assets/ExampleMod/Prefabs/PipeVerticalBalancer3h.prefab";
-        public static readonly string BalancerVerticalPipeI4 = "Assets/ExampleMod/Prefabs/PipeVerticalBalancer4h.prefab";
     }
 
 }

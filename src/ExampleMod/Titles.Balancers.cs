@@ -18,11 +18,6 @@ public partial class Titles
         public static readonly string BalancerVerticalFlatI2 = "Balancer Flat I2";
         public static readonly string BalancerVerticalFlatI3 = "Balancer Flat I3";
         public static readonly string BalancerVerticalFlatI4 = "Balancer Flat I4";
-
-        public static readonly string BalancerVerticalPipeI1 = "Balancer Pipe I1";
-        public static readonly string BalancerVerticalPipeI2 = "Balancer Pipe I2";
-        public static readonly string BalancerVerticalPipeI3 = "Balancer Pipe I3";
-        public static readonly string BalancerVerticalPipeI4 = "Balancer Pipe I4";
     }
 
 }

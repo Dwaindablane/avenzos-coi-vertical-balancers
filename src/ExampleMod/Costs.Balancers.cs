@@ -9,7 +9,6 @@ public partial class Costs
     {
         public static readonly EntityCostsTpl VerticalLoose = Mafi.Base.Costs.Build.CP2(4).Priority(0);
         public static readonly EntityCostsTpl VerticalFlat = Mafi.Base.Costs.Build.CP2(4).Priority(0);
-        public static readonly EntityCostsTpl VerticalPipe = Mafi.Base.Costs.Build.CP2(4).Priority(0);
     }
 
 }

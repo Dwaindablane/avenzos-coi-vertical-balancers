@@ -21,10 +21,6 @@ internal class BalancersResearchData : IResearchNodesData {
             .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalLooseI2)
             .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalLooseI3)
             .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalLooseI4)
-            .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalPipeI1)
-            .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalPipeI2)
-            .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalPipeI3)
-            .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalPipeI4)
             .BuildAndAdd();
 
         nodeProto.GridPosition = new Vector2i(24, 4);
