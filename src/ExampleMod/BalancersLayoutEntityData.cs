@@ -28,7 +28,7 @@ internal class BalancersLayoutEntityData : IModData
 
         CustomLayoutToken[] customTokens = new CustomLayoutToken[] { new CustomLayoutToken("[0]", (EntityLayoutParams p, int h) => new LayoutTokenSpec(0, h)) };
 
-        var layoutParams = new EntityLayoutParams(useNewLayoutSyntax: true, customTokens: customTokens, customPlacementRange: new ThicknessIRange(new ThicknessTilesI(0), new ThicknessTilesI(0)));
+        var layoutParams = new EntityLayoutParams(customTokens: customTokens, customPlacementRange: new ThicknessIRange(new ThicknessTilesI(0), new ThicknessTilesI(0)));
 
         var initLayout = new EntityLayoutParser(db).ParseLayoutOrThrow(layoutParams, $"[{height}]");
 
