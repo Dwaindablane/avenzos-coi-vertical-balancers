@@ -52,7 +52,7 @@ internal class BalancersLayoutEntityData : IModData
         EntityLayout layout = BuildElevatorLayout(registrator.PrototypesDb, portShape, height);
 
         ImmutableArray<ToolbarCategoryProto> categories = registrator.GetCategoriesProtos(Ids.ToolbarCategories.Balancers);
-        var zipper = new ZipperProto(id, strings, layout, costs.MapToEntityCosts(registrator), requiredPower, new LayoutEntityProto.Gfx(prefabPath,  default(RelTile3f), iconPath, ColorRgba.White, hideBlockedPortsIcon: true, null, categories, useInstancedRendering: false, 2));
+        var zipper = new ZipperProto(id, strings, layout, costs.MapToEntityCosts(registrator), requiredPower, new LayoutEntityProto.Gfx(prefabPath,  default(RelTile3f), iconPath, ColorRgba.White, hideBlockedPortsIcon: true, null, categories, useInstancedRendering: false));
 
         prototypesDb.Add(zipper);
     }
