@@ -1,2 +1,1 @@
-# avenzos-coi-vertical-balancers
-Mod for "Captain of industry"
+quick & dirty fix for avenzos-coi-vertical-balancers
