@@ -1,29 +1,39 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <TargetFramework>net471</TargetFramework>
-    <Configurations>Debug;Release</Configurations>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<LangVersion>10.0</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <DefineConstants>DEBUG</DefineConstants>
-    <OutputPath>bin\Debug\</OutputPath>
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <DefineConstants></DefineConstants>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<Configurations>Release;debug</Configurations>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+	<PropertyGroup>
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>portable</DebugType>
+		<DefineConstants />
+		<Optimize>true</Optimize>
+		<OutputPath>$(USERPROFILE)\AppData\Roaming\Captain of Industry\Mods\Avenzos.COI.VerticalBalancers\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|AnyCPU'">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>portable</DebugType>
+		<DefineConstants />
+		<Optimize>true</Optimize>
+		<OutputPath>$(USERPROFILE)\AppData\Roaming\Captain of Industry\Mods\Avenzos.COI.VerticalBalancers\</OutputPath>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<PackageReference ExcludeAssets="system" />
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<Compile Remove="DoNotSource\**" />
+		<Compile Remove="Unused Files\**" />
+		<EmbeddedResource Remove="DoNotSource\**" />
+		<EmbeddedResource Remove="Unused Files\**" />
+		<None Remove="DoNotSource\**" />
+		<None Remove="Unused Files\**" />
+	</ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Mafi">

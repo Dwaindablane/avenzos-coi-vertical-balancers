@@ -16,9 +16,11 @@ public sealed class VerticalBalancersMod : IMod
 	public string Name => "Avenzos_COI_VerticalBalancers";
 
 	// Version, currently unused.
-	public int Version => 1;
+	public int Version => 3;
 
     public bool IsUiOnly => throw new System.NotImplementedException();
+
+    public Option<IConfig> ModConfig => throw new System.NotImplementedException();
 
 
     // Mod constructor that lists mod dependencies as parameters.
@@ -57,5 +59,10 @@ public sealed class VerticalBalancersMod : IMod
     public void Initialize(DependencyResolver resolver, bool gameWasLoaded)
     {
         
+    }
+
+    public void EarlyInit(DependencyResolver resolver)
+    {
+
     }
 }

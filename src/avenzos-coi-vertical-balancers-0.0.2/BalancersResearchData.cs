@@ -23,7 +23,7 @@ internal class BalancersResearchData : IResearchNodesData {
             .AddLayoutEntityToUnlock(Ids.Balancers.BalancerVerticalLooseI4)
             .BuildAndAdd();
 
-        nodeProto.GridPosition = new Vector2i(24, 4);
+        nodeProto.GridPosition = new Vector2i(24, 1);
         nodeProto.AddParent(registrator.PrototypesDb.GetOrThrow<ResearchNodeProto>(Mafi.Base.Ids.Research.ConveyorBelts));
 
     }
